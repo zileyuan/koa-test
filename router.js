@@ -2,7 +2,7 @@ const defaultController = require('./controllers/default');
 
 function routeDefault(router) {
     router.get('/', defaultController.root);
-    router.get('/data', defaultController.data);
+    router.all('/data', defaultController.data);
     router.post('/signin', defaultController.signin);
 }
 
