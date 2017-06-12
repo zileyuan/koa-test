@@ -5,7 +5,7 @@ const bodyParser = require('koa-bodyparser');
 const view = require('koa-view');
 const static = require('koa-static');
 
-const controller_default = require('./controllers/default');
+const regiestRouter = require('./router');
 
 const app = new Koa();
 
@@ -21,7 +21,7 @@ app.use(bodyParser());
 app.use(view(__dirname + '/views'))
 app.use(static(__dirname + '/static'));
 
-controller_default(router);
+regiestRouter(router);
 app.use(router.routes());
 
 app.listen(3000);
