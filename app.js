@@ -1,13 +1,18 @@
+//object
 const Koa = require('koa');
-
-const router = require('koa-router')();
-const bodyParser = require('koa-bodyparser');
-const view = require('koa-view');
-const static = require('koa-static');
-
-const regiestRouter = require('./router');
+const Router = require('koa-router');
+const BodyParser = require('koa-bodyparser');
+const Static = require('koa-static');
+//function
+const View = require('koa-view');
 
 const app = new Koa();
+const router = new Router();
+const bodyParser = new BodyParser();
+const static = new Static(__dirname + '/static');
+const view = View(__dirname + '/views');
+
+const regiestRouter = require('./router');
 
 app.use(async (ctx, next) => {
     const start = new Date().getTime();
@@ -17,9 +22,9 @@ app.use(async (ctx, next) => {
     ctx.response.set('X-Response-Time', `${ms}ms`);
 });
 
-app.use(bodyParser());
-app.use(view(__dirname + '/views'))
-app.use(static(__dirname + '/static'));
+app.use(bodyParser);
+app.use(static);
+app.use(view);
 
 regiestRouter(router);
 app.use(router.routes());
