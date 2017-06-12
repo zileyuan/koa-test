@@ -4,6 +4,10 @@ module.exports = function (router) {
             title: 'Welcome'
         });
     });
+    router.get('/data', async (ctx, next) => {
+        var o={"name":"admin@example.com","password":123456};
+        ctx.body = o;
+    });
     router.post('/signin', async (ctx, next) => {
         let email = ctx.request.body.email || '';
         let password = ctx.request.body.password || '';
