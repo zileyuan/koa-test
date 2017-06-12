@@ -1,0 +1,29 @@
+{
+  "name": "koa-test",
+  "version": "1.0.0",
+  "description": "a simple koa test project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa",
+    "async"
+  ],
+  "author": "zileyuan@gmail.com",
+  "license": "MIT",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/zileyuan/koa-test.git"
+    },
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.0",
+    "koa-static": "^3.0.0",
+    "koa-view": "^2.1.0",
+    "pg": "^6.2.4",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.0.0"
+  }
+}
