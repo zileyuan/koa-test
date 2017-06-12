@@ -13,9 +13,9 @@
   "author": "zileyuan@gmail.com",
   "license": "MIT",
   "repository": {
-        "type": "git",
-        "url": "https://github.com/zileyuan/koa-test.git"
-    },
+    "type": "git",
+    "url": "https://github.com/zileyuan/koa-test.git"
+  },
   "dependencies": {
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
