@@ -1,10 +1,11 @@
 # koa-test
 a simple koa test project
 
-# run by node
-npm install
-node app.js
+## run by node
+1. npm install
+2. node app.js
 
-# run by supervisor
-npm install supervisor -g
-supervisor app.js
+## run by supervisor
+1. npm install
+2. npm install supervisor -g
+3. supervisor app.js
